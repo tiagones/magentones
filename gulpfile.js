@@ -16,7 +16,7 @@ var imagemin        = require('gulp-imagemin');
  */
 gulp.task('browser-sync', ['sass'], function() {
     browserSync.init({
-      proxy: "http://local.tiagones.com.br/magentones/"
+      proxy: "http://magentones.tiagones.com.br/"
     });
     gulp.watch("app/design/frontend/magentones/default/**").on('change', browserSync.reload);
 });
