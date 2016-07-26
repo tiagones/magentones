@@ -1,5 +1,4 @@
-<?xml version="1.0"?>
-<!--
+<?php
 /**
  * Magento
  *
@@ -20,24 +19,20 @@
  * needs please refer to http://www.magento.com for more information.
  *
  * @category    design
- * @package     rwd_default
+ * @package     base_default
  * @copyright   Copyright (c) 2006-2016 X.commerce, Inc. and affiliates (http://www.magento.com)
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
--->
-<layout version="0.1.0">
-    <contacts_index_index translate="label">
-        <label>Contact Us Form</label>
-        <reference name="head">
-            <action method="setTitle" translate="title" module="contacts"><title>Contact Us</title></action>
-        </reference>
-        <reference name="root">
-            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
-            <action method="setHeaderTitle" translate="title" module="contacts"><title>Contact Us</title></action>
-        </reference>
-        <update handle="cms_menu"/>
-        <reference name="content">
-            <block type="core/template" name="contactForm" template="contacts/form.phtml"/>
-        </reference>
-    </contacts_index_index>
-</layout>
+?>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title><?php echo $this->getTitle() ?></title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="<?php echo htmlspecialchars($this->getDescription()) ?>">
+<meta name="keywords" content="<?php echo htmlspecialchars($this->getKeywords()) ?>">
+<meta name="robots" content="<?php echo htmlspecialchars($this->getRobots()) ?>">
+<link rel="icon" href="<?php echo $this->getFaviconFile(); ?>" sizes="16x16" type="ico">
+<?php echo $this->getCssJsHtml() ?>
+<?php echo $this->getChildHtml() ?>
+<?php echo $this->helper('core/js')->getTranslatorScript() ?>
+<?php echo $this->getIncludes() ?>

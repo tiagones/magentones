@@ -44,17 +44,16 @@ gulp.task('sass', function () {
 /**
  * Compile all the .js files using UglifyJS
  */
-//gulp.task('uglify', function() {
-    //return gulp.src([
-        //'assets/_src/bower_components/jquery/dist/jquery.js',
-        //'assets/_src/js/functions.js'
-    //])
-    //.pipe(concat('scripts.min.js'))
-    //.pipe(uglify())
-    //.pipe(gulp.dest('assets/js'))
-    //.pipe(browserSync.reload({stream:true}))
-    //.pipe(gulp.dest('_site/assets/js'));
-//});
+gulp.task('uglify', function() {
+    return gulp.src([
+        'skin/frontend/magentones/default/js/noconflict.js',
+        'skin/frontend/magentones/default/js/functions.js'
+    ])
+    .pipe(concat('magentones.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('skin/frontend/magentones/default/js'))
+    .pipe(browserSync.reload({stream:true}));
+});
 
 
 
@@ -87,4 +86,4 @@ gulp.task('watch', function () {
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('default', [ 'sass', 'browser-sync', 'watch']);
+gulp.task('default', [ 'uglify', 'sass', 'browser-sync', 'watch']);

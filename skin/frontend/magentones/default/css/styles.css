@@ -90,6 +90,11 @@ input[type="button"] {
     border-color: #aaaaaa;
     outline: 0; }
 
+.global-site-notice {
+  margin-bottom: 0 !important;
+  -webkit-border-radius: 0 !important;
+          border-radius: 0 !important; }
+
 /**
  * Magento
  *
@@ -9495,4 +9500,4 @@ div.calendar table td.button {
   text-transform: none; }
 
 .wrapper {
-  background-color: pink; }
+  background-color: white; }
