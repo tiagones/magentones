@@ -10,13 +10,13 @@
   "author": "Tiago Pereira Dantas",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.13.0",
+    "browser-sync": "^2.19.0",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-concat": "^2.6.0",
-    "gulp-imagemin": "^3.0.1",
-    "gulp-sass": "^2.3.2",
-    "gulp-uglify": "^1.5.4"
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^4.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0"
   },
   "repository": {
     "type": "git",
